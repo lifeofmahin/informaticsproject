@@ -1,0 +1,536 @@
+.background-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* ⬅️ adjust darkness here */
+    z-index: 1;
+}
+#tm-video {
+    z-index: 0;
+    position: relative;
+}
+.tm-welcome-container {
+    z-index: 2; /* make sure text is above video and overlay */
+    position: relative;
+}
+.tm-welcome-container-inner{
+    font-family: serif !important;
+}
+
+.newsletter{
+    font-family: serif;
+}
+.newsletterformwrapper{
+    background: #00000073;
+    display: inline-block;
+    width: 305px;
+    padding: 16px;
+    border-radius: 22px;
+    transition: 0.3s ease-in;
+    height: 215px;
+    margin-top: -26px;
+}
+.newsletterformwrapper:hover{
+    background:black;
+}
+#email {
+    cursor: text;
+    margin: 19px;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    background: #ffffff38;
+    color: white;
+    width: 208px;
+    height: 38px;
+    font-size: 15px;
+}
+#subscribe{
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    9px;
+    background: #ffffff59;
+    margin-top: 25px;
+    font-size: 13px;
+    width: 80px;
+    height: 37px;
+}
+#invalid-message{
+    color: red;
+    margin-top: -25px;
+    padding: 0;
+    font-size: 9px;
+    margin-left: -121px;
+    margin-bottom: -25px;
+}
+.instagram{
+    width: 100%;
+    height: 320px;
+    background:red;
+}
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    min-height: 300px;
+}
+
+.instaprofile {
+    width: 50%;
+    max-width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10%;
+}
+
+.instagram h5 {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+.followbtn {
+    width: 80%;
+    max-width: 180px;
+    background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.followbtn span {
+    transition: all 0.3s ease;
+}
+
+.followbtn:hover {
+    background: linear-gradient(90deg, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+    transform: scale(1.03);
+}
+
+.followbtn:hover span {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .instaprofile {
+        width: 70%;
+        max-width: 120px;
+    }
+
+    .instagram h5 {
+        font-size: 0.95rem;
+    }
+
+    .followbtn {
+        max-width: 160px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instaprofile {
+        width: 80%;
+        max-width: 100px;
+    }
+
+    .followbtn {
+        max-width: 140px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .instagram {
+        padding: 16px;
+        gap: 10px;
+    }
+}
+.facebook {
+    background: linear-gradient(45deg, #1877f2, #3b5998, #4c69ba);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    min-height: 300px;
+}
+
+.instaprofile {
+    width: 50%;
+    max-width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10%;
+}
+
+.facebook h5 {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+.visitbtn {
+    width: 80%;
+    max-width: 180px;
+   background: linear-gradient(90deg, #1877f2, #3b5998, white);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.visitbtn span {
+    transition: all 0.3s ease;
+}
+
+.visitbtn:hover {
+    background: linear-gradient(90deg, white, #3b5998, #1877f2);
+    color: #3b5998;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+
+.visitbtn:hover span {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .instaprofile {
+        width: 70%;
+        max-width: 120px;
+    }
+
+    .facebook h5 {
+        font-size: 0.95rem;
+    }
+
+    .visitbtn {
+        max-width: 160px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instaprofile {
+        width: 80%;
+        max-width: 100px;
+    }
+
+    .visitbtn {
+        max-width: 140px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .facebook {
+        padding: 16px;
+        gap: 10px;
+    }
+}
+.visitbtn {
+    color:ffff !important;
+}
+.instagram{
+    width: 100%;
+    height: 320px;
+    background:red;
+}
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    min-height: 300px;
+}
+
+.instaprofile {
+    width: 50%;
+    max-width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10%;
+}
+
+.instagram h5 {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+.followbtn {
+    width: 80%;
+    max-width: 180px;
+    background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.followbtn span {
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.followbtn:hover {
+    background: linear-gradient(90deg, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+    transform: scale(1.03);
+}
+
+.followbtn:hover span {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .instaprofile {
+        width: 70%;
+        max-width: 120px;
+    }
+
+    .instagram h5 {
+        font-size: 0.95rem;
+    }
+
+    .followbtn {
+        max-width: 160px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instaprofile {
+        width: 80%;
+        max-width: 100px;
+    }
+
+    .followbtn {
+        max-width: 140px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .instagram {
+        padding: 16px;
+        gap: 10px;
+    }
+}
+.facebook {
+    background: linear-gradient(45deg, #1877f2, #3b5998, #4c69ba);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    min-height: 324px;
+}
+
+.instaprofile {
+    width: 50%;
+    max-width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10%;
+}
+
+.facebook h5 {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+.visitbtn {
+    width: 80%;
+    max-width: 180px;
+   background: linear-gradient(90deg, #1877f2, #3b5998, white);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.visitbtn span {
+    transition: all 0.3s ease;
+    color: white! important;
+}
+
+.visitbtn:hover {
+    background: linear-gradient(90deg, white, #3b5998, #1877f2);
+    color: #3b5998;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+
+.visitbtn:hover span {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .instaprofile {
+        width: 70%;
+        max-width: 120px;
+    }
+
+    .facebook h5 {
+        font-size: 0.95rem;
+    }
+
+    .visitbtn {
+        max-width: 160px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instaprofile {
+        width: 80%;
+        max-width: 100px;
+    }
+
+    .visitbtn {
+        max-width: 140px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .facebook {
+        padding: 16px;
+        gap: 10px;
+    }
+}
+.visitbtn {
+    color:ffff !important;
+}
+
+
+.tm-social-icon {
+    color: #555;
+    transition: 0.3s ease;
+}
+.tm-social-icon:hover {
+    color: #007bff; /* or any theme color */
+}
+.contacticons{
+    color:red;
+}
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(4, 4, 90);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(50px);
+    z-index: 9999;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
